@@ -20,3 +20,13 @@ const weightOfAllCars = cars.reduce((accumulator, car) => {
 }, 0)
 
 console.log(weightOfAllCars);
+
+const weightOfElectricCars = cars.reduce((accumulator, electricCar) => {
+    if (electricCar.isElectric === true){
+        return accumulator + electricCar.weight;
+    } else {
+        return accumulator;
+    }
+}, 0)
+
+console.log(weightOfElectricCars);
